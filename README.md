@@ -1,0 +1,1 @@
+Thư mục BTL chứa source code chương trình nhúng bằng C, còn thư mục gui chứa source của giao diện hiển thị trên PC bằng Python.
