@@ -671,6 +671,7 @@ int minimax(char board[][3], uint8_t turn)
     return 0;
 }
 
+// function finds the best move
 void find_best_move(char board[][3])
 {
     int best = -1000;
@@ -721,6 +722,7 @@ int min(int a, int b)
     }
 }
 
+// function resets the board
 void board_clear(char board[][3])
 {
     for (uint8_t i = 0; i < 3; i++)
@@ -732,6 +734,7 @@ void board_clear(char board[][3])
     }
 }
 
+// function copies the board to an array
 void board_copy(char board[][3], char copy[])
 {
     uint8_t n = 0;
@@ -745,6 +748,7 @@ void board_copy(char board[][3], char copy[])
     }
 }
 
+// function sends board data to PC
 void board_to_pc(char board[][3], move_typedef *cursor)
 {
 	char buff[11];
@@ -754,6 +758,7 @@ void board_to_pc(char board[][3], move_typedef *cursor)
 	HAL_UART_Transmit(&huart1, buff, sizeof(buff), 100);
 }
 
+// function decides a random move
 void board_easy_mode(char board[][3], uint8_t rand)
 {
 	if (rand % 2)
